@@ -1,0 +1,53 @@
+body
+{
+	min-width:1024px; /* avoid content behind hidden without ability to scroll if screen width too litle */
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	background-image:url(../img/temp_background.png);
+}
+
+#main
+{
+	width:1024px;
+	display:flex;
+	justify-content:center;
+}
+
+
+header{
+	width:1024px;
+	height:169px;
+	background-image:url(../img/temp_header.png);
+	background-size:1024px 169px;
+	background-repeat:no-repeat;
+}
+
+nav{
+	width:250px;
+	height:329px;
+	background-image:url(../img/temp_nav.png);
+	background-size:250px 329px;
+	background-repeat:no-repeat;
+}
+
+section{
+
+	width:650px;
+	min-height:500px;
+}
+
+#right{
+	float:right;
+	width:124px;
+	height:278px;
+	background-image:url(../img/temp_right.png);
+	background-size:124px 278px;
+	background-repeat:no-repeat;
+}
+
+footer{
+	height:50px;
+	background-color:white;
+	width:1024px;
+}
