@@ -24,10 +24,14 @@
 		{
 			width:1000px;
 			height:675px;
-			display:flex;
 			/*justify-content:center;*/
 			background-image:url(book.png);
 			font-family: 'Courgette', cursive;
+		}
+		.pages
+		{
+			display:flex;
+			position:absolute;
 		}
 		.left
 		{
@@ -57,16 +61,16 @@
 			overflow:auto;
 		}
 		
-		/*@keyframes pltr {
+		@keyframes pltr {
 			0% {transform:scaleX(1);}
 			100% {transform:scaleX(-1);}
 		}
-		.left
+		.toto .left
 		{
 			transform-origin:right;
 			animation-name: pltr;
 			animation-duration: 4s;
-		}*/
+		}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -74,20 +78,40 @@
 
     <body>        
 		<div id="book">
-			<div class="left">
-				<div>
-					Quand tout à coup, l'incongrus entra dans la taverne. Mais que faisait donc t-il là ? Etait il à la recherche de l'amour ?
-					<br /><br />
-					Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<div class="pages">
+				<div class="left">
+					<div>
+						Quand tout à coup, l'incongrus entra dans la taverne. Mais que faisait donc t-il là ? Etait il à la recherche de l'amour ?
+						<br /><br />
+						Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</div>
+				<div class="right">
+					<div>
+						Quand tout à coup, l'incongrus entra dans la taverne. Mais que faisait donc t-il là ? Etait il à la recherche de l'amour ?
+						<br /><br />
+						Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
 				</div>
 			</div>
-			<div class="right">
-				<div>
-					Quand tout à coup, l'incongrus entra dans la taverne. Mais que faisait donc t-il là ? Etait il à la recherche de l'amour ?
-					<br /><br />
-					Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<div class="pages toto">
+				<div class="left">
+					<div>
+						Quand tout à coup, l'incongrus entra dans la taverne. Mais que faisait donc t-il là ? Etait il à la recherche de l'amour ?
+						<br /><br />
+						Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</div>
+				<div class="right">
+					<div>
+						Quand tout à coup, l'incongrus entra dans la taverne. Mais que faisait donc t-il là ? Etait il à la recherche de l'amour ?
+						<br /><br />
+						Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
 				</div>
 			</div>
 		</div>
