@@ -35,6 +35,8 @@
 		}
 		.left
 		{
+			position:relative;
+			z-index:10;
 			margin-top:17px;
 			margin-left:7px;
 			height:618px;
@@ -43,6 +45,8 @@
 		}
 		.right
 		{
+			position:relative;
+			z-index:10;
 			margin-top:18px;
 			height:618px;
 			width:489px;
@@ -60,7 +64,15 @@
 			margin:25px;
 			overflow:auto;
 		}
-		
+		.nouvelles-pages .left
+		{
+			z-index: 15;
+			transform: scaleX(0);
+		}
+		.nouvelles-pages .right
+		{
+			z-index: 5;
+		}
 		@keyframes prtlR {
 			0% {transform:scaleX(1);}
 			100% {transform:scaleX(0);}
@@ -69,7 +81,7 @@
 			0% {transform:scaleX(0);}
 			100% {transform:scaleX(1);}
 		}
-		.tourner .right
+		.anciennes-pages.tourner .right
 		{
 			transform-origin:left;
 			animation-name: prtlR;
@@ -77,10 +89,8 @@
 			animation-timing-function: ease-in;
 			animation-fill-mode: forwards;
 		}
-		.tourner .left
+		.nouvelles-pages.tourner .left
 		{
-			
-			transform:scaleX(0);
 			transform-origin:right;
 			animation-name: prtlL;
 			animation-duration: 2s;
@@ -94,18 +104,18 @@
 
     <body>        
 		<div id="book">
-			<div class="pages">
-				<div class="left"> <!-- Old page -->
+			<div class="pages anciennes-pages">
+				<div class="left">
 					<div>
 						Quand tout à coup, l'incongrus entra dans la taverne. Mais que faisait donc t-il là ? Etait il à la recherche de l'amour ?
 						<br /><br />
 						Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
+						<input type="button" value="TOURNER LA PAGEEEEEE" onclick="$('.anciennes-pages').addClass('tourner');setTimeout(function(){$('.nouvelles-pages').addClass('tourner');},2000);setTimeout(function(){$('.pages').removeClass('tourner');np = $('.nouvelles-pages');ap = $('.anciennes-pages');np.removeClass('nouvelles-pages').addClass('anciennes-pages');ap.removeClass('anciennes-pages').addClass('nouvelles-pages');},4000);" />
 					</div>
 				</div>
-				<div class="right"> <!-- New page -->
+				<div class="right">
 					<div>
-						C'est une nouvelle page, diantre !<br /><br />
 						Quand tout à coup, l'incongrus entra dans la taverne. Mais que faisait donc t-il là ? Etait il à la recherche de l'amour ?
 						<br /><br />
 						Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
@@ -113,18 +123,21 @@
 					</div>
 				</div>
 			</div>
-			<div class="pages tourner">
-				<div class="left"> <!-- New page -->
+			<div class="pages nouvelles-pages">
+				<div class="left">
 					<div>
 						C'est une nouvelle page, diantre !<br /><br />
 						Quand tout à coup, l'incongrus entra dans la taverne. Mais que faisait donc t-il là ? Etait il à la recherche de l'amour ?
 						<br /><br />
 						Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
+						<input type="button" value="TOURNER LA PAGEEEEEE" onclick="$('.anciennes-pages').addClass('tourner');setTimeout(function(){$('.nouvelles-pages').addClass('tourner');},2000);setTimeout(function(){$('.pages').removeClass('tourner');np = $('.nouvelles-pages');ap = $('.anciennes-pages');np.removeClass('nouvelles-pages').addClass('anciennes-pages');ap.removeClass('anciennes-pages').addClass('nouvelles-pages');},4000);" />
+
 					</div>
 				</div>
 				<div class="right"> <!-- Old page -->
 					<div>
+						C'est une nouvelle page, diantre !<br /><br />
 						Quand tout à coup, l'incongrus entra dans la taverne. Mais que faisait donc t-il là ? Etait il à la recherche de l'amour ?
 						<br /><br />
 						Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
