@@ -99,7 +99,22 @@
 		}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
+<script>
+function tournerpage()
+{
+	$('.anciennes-pages').addClass('tourner');
+	setTimeout(function(){
+		$('.nouvelles-pages').addClass('tourner');
+	},2000);
+	setTimeout(function(){
+		$('.pages').removeClass('tourner');
+		np = $('.nouvelles-pages');
+		ap = $('.anciennes-pages');
+		np.removeClass('nouvelles-pages').addClass('anciennes-pages');
+		ap.removeClass('anciennes-pages').addClass('nouvelles-pages');
+	},4000);
+}
+</script>
     </head>
 
     <body>        
@@ -111,7 +126,7 @@
 						<br /><br />
 						Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-						<input type="button" value="TOURNER LA PAGEEEEEE" onclick="$('.anciennes-pages').addClass('tourner');setTimeout(function(){$('.nouvelles-pages').addClass('tourner');},2000);setTimeout(function(){$('.pages').removeClass('tourner');np = $('.nouvelles-pages');ap = $('.anciennes-pages');np.removeClass('nouvelles-pages').addClass('anciennes-pages');ap.removeClass('anciennes-pages').addClass('nouvelles-pages');},4000);" />
+						<input type="button" value="TOURNER LA PAGEEEEEE" onclick="tournerpage();" />
 					</div>
 				</div>
 				<div class="right">
@@ -131,7 +146,7 @@
 						<br /><br />
 						Il n'en fallu pas moins pour Mr Billigro, le maitre d'hotel, pour soupsonner le malhonnête d'être recherché par le seigneur des contrées voisinnes.<br /><br />
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-						<input type="button" value="TOURNER LA PAGEEEEEE" onclick="$('.anciennes-pages').addClass('tourner');setTimeout(function(){$('.nouvelles-pages').addClass('tourner');},2000);setTimeout(function(){$('.pages').removeClass('tourner');np = $('.nouvelles-pages');ap = $('.anciennes-pages');np.removeClass('nouvelles-pages').addClass('anciennes-pages');ap.removeClass('anciennes-pages').addClass('nouvelles-pages');},4000);" />
+						<input type="button" value="TOURNER LA PAGEEEEEE" onclick="tournerpage();" />
 
 					</div>
 				</div>
