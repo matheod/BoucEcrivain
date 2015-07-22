@@ -61,15 +61,28 @@
 			overflow:auto;
 		}
 		
-		@keyframes pltr {
+		@keyframes prtlR {
 			0% {transform:scaleX(1);}
-			100% {transform:scaleX(-1);}
+			100% {transform:scaleX(0);}
+		}
+		@keyframes prtlL {
+			0% {transform:scaleX(0);}
+			100% {transform:scaleX(1);}
+		}
+		.toto .right
+		{
+			transform-origin:left;
+			animation-name: prtlR;
+			animation-duration: 2s;
+			animation-timing-function: ease-in;
 		}
 		.toto .left
 		{
 			transform-origin:right;
-			animation-name: pltr;
-			animation-duration: 4s;
+			animation-name: prtlL;
+			animation-duration: 2s;
+			animation-delay: 2s;
+			animation-timing-function: ease-out;
 		}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
