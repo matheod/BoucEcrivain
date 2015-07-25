@@ -1,53 +1,91 @@
+html,body
+{
+	height:100%;
+}
 body
 {
 	min-width:1024px; /* avoid content behind hidden without ability to scroll if screen width too litle */
-	display:flex;
-	flex-direction: column;
-	align-items:center;
-	background-image:url(../img/temp_background.png);
-}
-
-#main
-{
-	width:1024px;
+	margin:0;
 	display:flex;
 	justify-content:center;
+	align-items:center;
+	background-image:url(../img/background.png);
 }
 
-
-header{
-	width:1024px;
-	height:169px;
-	background-image:url(../img/temp_header.png);
-	background-size:1024px 169px;
-	background-repeat:no-repeat;
+#book
+{
+	width:1000px;
+	height:675px;
+	/*justify-content:center;*/
+	background-image:url(../img/book.png);
+	font-family: 'Courgette', cursive;
 }
-
-nav{
-	width:250px;
-	height:329px;
-	background-image:url(../img/temp_nav.png);
-	background-size:250px 329px;
-	background-repeat:no-repeat;
+.pages
+{
+	display:flex;
+	position:absolute;
 }
-
-section{
-
-	width:650px;
-	min-height:500px;
+.left
+{
+	position:relative;
+	z-index:10;
+	margin-top:17px;
+	margin-left:7px;
+	height:618px;
+	width:489px;
+	background-image:url(../img/left.png);
 }
-
-#right{
-	float:right;
-	width:124px;
-	height:278px;
-	background-image:url(../img/temp_right.png);
-	background-size:124px 278px;
-	background-repeat:no-repeat;
+.right
+{
+	position:relative;
+	z-index:10;
+	margin-top:18px;
+	height:618px;
+	width:489px;
+	background-image:url(../img/right.png);
 }
-
-footer{
-	height:50px;
-	background-color:white;
-	width:1024px;
+.left>div
+{
+	margin:25px;
+	overflow:auto;
+	height:570px;
+	
+}
+.right>div
+{
+	margin:25px;
+	overflow:auto;
+}
+.nouvelles-pages .left
+{
+	z-index: 15;
+	transform: scaleX(0);
+}
+.nouvelles-pages .right
+{
+	z-index: 5;
+}
+@keyframes prtlR {
+	0% {transform:scaleX(1);}
+	100% {transform:scaleX(0);}
+}
+@keyframes prtlL {
+	0% {transform:scaleX(0);}
+	100% {transform:scaleX(1);}
+}
+.anciennes-pages.tourner .right
+{
+	transform-origin:left;
+	animation-name: prtlR;
+	animation-duration: 2s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+.nouvelles-pages.tourner .left
+{
+	transform-origin:right;
+	animation-name: prtlL;
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
 }
