@@ -1,5 +1,5 @@
 animation_en_cours = false;
-function tournerpage()
+function turnpage()
 {
 	if(!animation_en_cours)
 	{
@@ -17,4 +17,17 @@ function tournerpage()
 			animation_en_cours = false;
 		},4000);
 	}
+}
+
+
+function request(url)
+{
+	$.ajax(url, {
+		dataType : 'json',
+		success: function(data) {
+			$(".nouvelles-pages .left>div").html(data.left);
+			$(".nouvelles-pages .right>div").html(data.right);
+			turnpage();
+		}
+	});
 }
