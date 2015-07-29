@@ -20,9 +20,13 @@ function turnpage()
 }
 
 
-function request(url)
+function request(url, data, method)
 {
+	data = data || {};
+	method = method || 'GET';
 	$.ajax(url, {
+		data: data,
+		method: method,
 		dataType : 'json',
 		success: function(data) {
 			$(".nouvelles-pages .left>div").html(data.left);
@@ -32,4 +36,4 @@ function request(url)
 	});
 }
 
-request('ajax/inscription.php');
+request('ajax/main.php');
