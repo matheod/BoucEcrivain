@@ -31,3 +31,5 @@ function request(url)
 		}
 	});
 }
+
+request('ajax/inscription.php');
